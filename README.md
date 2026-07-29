@@ -16,12 +16,18 @@ An unofficial Pi Coin-inspired startup animation, persistent Mint pane, and opti
 - Purple/gold working indicator and a responsive narrow-terminal fallback.
 - Opt-in `pi-coin` dark theme; the extension never changes the selected theme automatically.
 
-## Install from GitHub
+## Install
 
-Install the tagged public release:
+Install from npm:
 
 ```sh
-pi install git:github.com/phivu3125/pi-network-theme@v0.1.0
+pi install npm:pi-network-theme
+```
+
+To install the tagged GitHub release instead:
+
+```sh
+pi install git:github.com/phivu3125/pi-network-theme@v0.1.1
 ```
 
 For a local checkout during development:
@@ -33,7 +39,7 @@ npm ci
 pi -e .
 ```
 
-Review third-party Pi packages before installing: extensions execute with your system permissions. This package is **not published to npm yet**; no npm install command is provided until that changes.
+Review third-party Pi packages before installing: extensions execute with your system permissions.
 
 ## Use
 

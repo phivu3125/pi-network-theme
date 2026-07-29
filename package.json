@@ -1,6 +1,6 @@
 {
   "name": "pi-network-theme",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unofficial Pi Network theme with a Pi coin startup animation, persistent Pi Mint pane, and matching animations for Pi.",
   "type": "module",
   "license": "MIT",

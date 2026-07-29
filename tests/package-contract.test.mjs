@@ -56,7 +56,7 @@ function contrast(foreground, background) {
 
 test("manifest exposes only the intended Pi resources and keeps Chafa build-only", () => {
   assert.equal(packageJson.name, "pi-network-theme");
-  assert.equal(packageJson.version, "0.1.0");
+  assert.equal(packageJson.version, "0.1.1");
   assert.ok(packageJson.keywords.includes("pi-package"));
   assert.deepEqual(packageJson.pi.extensions, ["./extensions/pi-network-theme.ts"]);
   assert.deepEqual(packageJson.pi.themes, ["./themes/pi-coin.json"]);
