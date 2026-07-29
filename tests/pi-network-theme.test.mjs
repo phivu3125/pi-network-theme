@@ -439,7 +439,7 @@ test("Pi coin startup animation runs once and holds its final frame", async (t) 
   t.mock.timers.tick(1_320);
   const final = component.render(120).join("\n");
   const rendersAtFinal = calls.renders;
-  t.mock.timers.tick(1_000);
+  assert.doesNotThrow(() => t.mock.timers.tick(10_000), "queued callbacks after the final frame are inert");
 
   assert.notEqual(entrance, final);
   assert.equal(component.render(120).join("\n"), final);

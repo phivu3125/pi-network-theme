@@ -100,11 +100,14 @@ function renderTinyHeader(width: number): string[] {
 }
 
 function createHeader(ctx: ExtensionContext, theme: Theme, tui: { requestRender(): void }): Component & { dispose(): void } {
+  const finalFrameIndex = STARTUP_ICON_ART.full.frames.length - 1;
   let frameIndex = 0;
   let timer: ReturnType<typeof setInterval> | undefined = setInterval(() => {
-    frameIndex += 1;
+    if (frameIndex >= finalFrameIndex) return;
+
+    frameIndex = Math.min(frameIndex + 1, finalFrameIndex);
     tui.requestRender();
-    if (frameIndex === STARTUP_ICON_ART.full.frames.length - 1) {
+    if (frameIndex === finalFrameIndex) {
       clearInterval(timer);
       timer = undefined;
     }
