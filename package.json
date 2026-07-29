@@ -1,0 +1,66 @@
+{
+  "name": "pi-network-theme",
+  "version": "0.1.0",
+  "description": "Unofficial Pi Network theme with a Pi coin startup animation, persistent Pi Mint pane, and matching animations for Pi.",
+  "type": "module",
+  "license": "MIT",
+  "author": "phivu3125",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phivu3125/pi-network-theme.git"
+  },
+  "homepage": "https://github.com/phivu3125/pi-network-theme#readme",
+  "bugs": {
+    "url": "https://github.com/phivu3125/pi-network-theme/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-coding-agent",
+    "pi-network",
+    "pi-coin",
+    "theme",
+    "terminal"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "files": [
+    "extensions/pi-network-theme.ts",
+    "generated/pi-network-art.ts",
+    "themes/pi-coin.json",
+    "assets/preview.png",
+    "assets/demo.png",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "generate:art": "node scripts/generate-art.mjs",
+    "preview:art": "node scripts/preview-art.mjs",
+    "test:generated": "node --test tests/generated-art.test.mjs",
+    "test:ui": "node --test tests/pi-network-theme.test.mjs",
+    "test:package": "node --test tests/package-contract.test.mjs",
+    "test": "npm run test:generated && npm run test:ui && npm run test:package",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "0.82.1",
+    "@earendil-works/pi-tui": "0.82.1",
+    "@types/node": "24.12.4",
+    "chafa-wasm": "0.3.3",
+    "typescript": "5.9.3"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/pi-network-theme.ts"
+    ],
+    "themes": [
+      "./themes/pi-coin.json"
+    ],
+    "image": "./assets/demo.png"
+  }
+}

@@ -1,0 +1,30 @@
+# Dependencies and package artifacts
+node_modules/
+*.tgz
+coverage/
+
+# Logs and debug output
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local package, environment, and agent state
+.npmrc
+.env
+.env.*
+!.env.example
+.pi/
+.claude/
+.codex/
+.gemini/
+.opencode/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.tsbuildinfo
