@@ -61,6 +61,10 @@ test("manifest exposes only the intended Pi resources and keeps Chafa build-only
   assert.deepEqual(packageJson.pi.extensions, ["./extensions/pi-network-theme.ts"]);
   assert.deepEqual(packageJson.pi.themes, ["./themes/pi-coin.json"]);
   assert.equal(packageJson.pi.image, "./assets/demo.png");
+  assert.equal(
+    packageJson.pi.video,
+    "https://raw.githubusercontent.com/phivu3125/pi-network-theme/main/assets/demo.mp4",
+  );
   assert.deepEqual(packageJson.repository, {
     type: "git",
     url: "git+https://github.com/phivu3125/pi-network-theme.git",
@@ -81,6 +85,7 @@ test("manifest exposes only the intended Pi resources and keeps Chafa build-only
   assert.equal(packageJson.files.some((entry) => entry.startsWith("scripts/")), false);
   assert.equal(packageJson.files.some((entry) => entry.startsWith("assets/source/")), false);
   assert.equal(packageJson.files.some((entry) => entry.startsWith("assets/frames/")), false);
+  assert.equal(packageJson.files.includes("assets/demo.mp4"), false);
 });
 
 test("extension uses the release package config filename", () => {
@@ -98,6 +103,8 @@ test("npm tarball excludes source frames, build tooling, and WebAssembly", async
   assert.deepEqual(paths.sort(), [...EXPECTED_PACKED_PATHS].sort());
   assert.ok(paths.includes("assets/demo.png"));
   assert.ok(paths.includes("assets/preview.png"));
+  assert.equal(paths.includes("assets/demo.mp4"), false);
+  assert.equal(paths.some((path) => path.endsWith(".mp4")), false);
   assert.equal(
     paths.some((path) => path.endsWith(".png") && !["assets/demo.png", "assets/preview.png"].includes(path)),
     false,

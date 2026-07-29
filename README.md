@@ -4,6 +4,8 @@ An unofficial Pi Coin-inspired startup animation, persistent Mint pane, and opti
 
 ![Visual overview of the Pi Network Theme for Pi](./assets/demo.png)
 
+[Real terminal demo (muted, shortened MP4)](https://github.com/phivu3125/pi-network-theme/raw/main/assets/demo.mp4)
+
 > **Unofficial community package.** This project is not affiliated with, endorsed by, sponsored by, or an official product of Pi Network or the Pi coding agent project. The Pi Network logo is used with permission, as stated by the package creator; Pi Network names, marks, and artwork remain the property of their respective owner. See [Third-party notices](./THIRD_PARTY_NOTICES.md).
 
 ## Features

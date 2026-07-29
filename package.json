@@ -61,6 +61,7 @@
     "themes": [
       "./themes/pi-coin.json"
     ],
-    "image": "./assets/demo.png"
+    "image": "./assets/demo.png",
+    "video": "https://raw.githubusercontent.com/phivu3125/pi-network-theme/main/assets/demo.mp4"
   }
 }
